@@ -1,3 +1,5 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mi Retiro Libre — Plantilla para ordenar tus finanzas y jubilarte tranquilo</title>
 <style>
   :root{
@@ -74,7 +76,8 @@
   @media (prefers-reduced-motion:reduce){.ticker-track{animation:none;padding-left:0;justify-content:center;flex-wrap:wrap;white-space:normal}}
 
   /* nav */
-  .nav{position:sticky;top:0;z-index:50;background:rgba(22,35,59,.92);backdrop-filter:saturate(1.2) blur(10px);
+  .nav{position:sticky;top:0;z-index:50;background:rgba(22,35,59,.92);
+    -webkit-backdrop-filter:saturate(1.2) blur(10px);backdrop-filter:saturate(1.2) blur(10px);
     border-bottom:1px solid var(--line-dk);color:var(--cream)}
   .nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
   .brand{display:inline-flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:700;font-size:1.08rem}
@@ -368,6 +371,45 @@
     .crow{padding:16px 18px}
     .count .u{min-width:68px;padding:13px 12px}.count .u b{font-size:1.9rem}
   }
+  @media (max-width:480px){
+    :root{--gut:18px}
+    .nav .brand{font-size:.98rem}
+    .nav-cta{font-size:.72rem;padding:10px 12px;letter-spacing:0}
+    .nav-cta .nc-was,.nav-cta .nc-price{display:none}
+    .offerbar{font-size:.7rem;gap:8px;flex-wrap:wrap;padding:10px 14px}
+    .offerbar .oc{min-width:78px;padding:2px 7px}
+    .hero{padding:52px 0 60px}
+    .hero h1{font-size:clamp(2.05rem,8.4vw,2.7rem)}
+    .hero .sub{font-size:1.05rem}
+    .hero .cta-row{align-items:stretch}
+    .hero .cta-row .btn,.urgency .btn,.final .btn{width:100%}
+    .hero .rating,.hero .trust{justify-content:center;text-align:center}
+    .sec-head{margin-bottom:38px}
+    .sec-head h2{font-size:1.68rem}
+    .sec-head .lede{font-size:1.02rem}
+    .insp p{font-size:1.14rem}
+    .pain-foot{font-size:1.2rem}
+    .step .no{width:38px;height:38px;font-size:1.15rem}
+    .crow{grid-template-columns:1fr;gap:6px}
+    .crow .p{text-align:left}
+    .crow.mine .p{font-size:1.3rem}
+    .p-info h2{font-size:1.7rem}
+    .price-line .now{font-size:2.4rem}
+    .statcard{padding:12px 14px}
+    .statcard .st{padding:0 4px}
+    .statcard .st b{font-size:1.2rem}
+    .statcard .st span{font-size:.55rem}
+    .btn-cart{font-size:1.05rem;padding:19px 0}
+    .scline{font-size:.94rem}
+    .count{gap:8px}
+    .count .u{min-width:60px;padding:12px 8px}
+    .count .u b{font-size:1.7rem}
+    .bonus{padding:24px 22px}
+    .seal{width:100px;height:100px}
+    .sales-popup{left:12px;right:12px;bottom:12px;max-width:none}
+    summary{font-size:1.04rem}
+    footer .frow{flex-direction:column;align-items:flex-start;gap:14px}
+  }
 </style>
 
 <!-- ===== BARRA DE OFERTA + CONTADOR ===== -->
@@ -390,7 +432,7 @@
 <nav class="nav">
   <div class="wrap">
     <a class="brand" href="#top"><span class="seal">✦</span> Mi Retiro Libre</a>
-    <a class="nav-cta" href="#comprar"><s>$29.900</s>Quiero mi plantilla — $14.900</a>
+    <a class="nav-cta" href="#comprar"><s class="nc-was">$29.900</s>Quiero mi plantilla<span class="nc-price"> — $14.900</span></a>
   </div>
 </nav>
 
